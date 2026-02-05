@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="mk">
   <head>
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Belga Crown во Скопје нуди премиум торти, белгиски пралини, чизкејк и кафе со внимателно одбрани состојки."
+    />
+
+    <link rel="canonical" href="https://belgacrown.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Belga Crown" />
+    <meta property="og:locale" content="mk_MK" />
+    <meta property="og:title" content="Belga Crown – торти и десерти во Скопје" />
+    <meta
+      property="og:description"
+      content="Премиум торти, белгиски пралини, чизкејк и кафе во Скопје."
+    />
+    <meta property="og:url" content="https://belgacrown.com/" />
+    <meta property="og:image" content="https://belgacrown.com/images/hero_background.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Belga Crown – торти и десерти во Скопје" />
+    <meta
+      name="twitter:description"
+      content="Премиум торти, белгиски пралини, чизкејк и кафе во Скопје."
+    />
+    <meta name="twitter:image" content="https://belgacrown.com/images/hero_background.png" />
 
     <title>Торти и десерти во Скопје (torti Skopje) – белгиски пралини, чизкејк и кафе | Достава во Скопје – Belga Crown</title>
 
@@ -29,6 +55,55 @@
     />
 
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400&display=swap" rel="stylesheet" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Belga Crown – Чоколатерија & Кафе",
+        "url": "https://belgacrown.com/",
+        "email": "belgacrown@gmail.com",
+        "telephone": "+38971333626",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Костурски Херои бр.17 М-2",
+          "addressLocality": "Скопје",
+          "postalCode": "1000",
+          "addressCountry": "MK"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "08:00",
+            "closes": "20:00"
+          }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+38971333626",
+            "contactType": "customer service"
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+38971493560",
+            "contactType": "customer service"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/belga_crown/",
+          "https://www.facebook.com/belgacrown/"
+        ]
+      }
+    </script>
 
     <style>
       /* RESET */
@@ -63,6 +138,38 @@
         margin: 0 auto;
 
         padding: 0 2rem;
+      }
+
+      .seo-hidden {
+        display: none !important;
+      }
+
+      .skip-link {
+        position: absolute;
+        left: 1rem;
+        top: 0.5rem;
+        transform: translateY(-220%);
+        z-index: 2001;
+        background: #fff;
+        color: #111;
+        padding: 0.5rem 0.85rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        text-decoration: none;
+      }
+
+      .skip-link:focus-visible {
+        transform: translateY(0);
+      }
+
+      .logo-link {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .nav-social-link {
+        display: flex;
+        align-items: center;
       }
 
       /* ─────────────── HEADER ─────────────── */
@@ -403,10 +510,6 @@
         transition: transform 0.4s;
       }
 
-      .menu-item:hover img {
-        transform: scale(1.05);
-      }
-
       .menu-info {
         position: absolute;
 
@@ -433,10 +536,6 @@
         transition: opacity 0.3s;
       }
 
-      .menu-item:hover .menu-info {
-        opacity: 1;
-      }
-
       .menu-info h3 {
         font-size: 1.2rem;
 
@@ -450,6 +549,10 @@
       }
 
       /* ─────────────── CAKE SECTION (Horizontal) ─────────────── */
+
+      .cake-section h2 {
+        text-align: center;
+      }
 
       .cake-gallery {
         display: flex;
@@ -503,10 +606,6 @@
         transition: transform 0.4s;
       }
 
-      .cake-card:hover img {
-        transform: scale(1.05);
-      }
-
       .cake-info {
         position: absolute;
 
@@ -533,10 +632,6 @@
         transition: opacity 0.3s;
       }
 
-      .cake-card:hover .cake-info {
-        opacity: 1;
-      }
-
       .cake-info h3 {
         font-size: 1.2rem;
 
@@ -547,6 +642,81 @@
         font-size: 0.97rem;
 
         line-height: 1.4;
+      }
+
+      .menu-item:focus-visible,
+      .cake-card:focus-visible {
+        outline: 2px solid #a6684b;
+        outline-offset: 3px;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .menu-item:hover img {
+          transform: scale(1.05);
+        }
+
+        .menu-item:hover .menu-info {
+          opacity: 1;
+        }
+
+        .cake-card:hover img {
+          transform: scale(1.05);
+        }
+
+        .cake-card:hover .cake-info {
+          opacity: 1;
+        }
+      }
+
+      @media (hover: none), (pointer: coarse) {
+        .menu-item,
+        .cake-card {
+          cursor: pointer;
+        }
+
+        .menu-item .menu-info,
+        .cake-card .cake-info {
+          position: static;
+          inset: auto;
+          width: 100%;
+          max-height: 0;
+          overflow: hidden;
+          overflow-y: hidden;
+          opacity: 1;
+          padding: 0 0.85rem;
+          background: #1f1714;
+          align-items: flex-start;
+          justify-content: flex-start;
+          text-align: left;
+          transition: max-height 0.35s ease, padding 0.25s ease;
+        }
+
+        .menu-item.is-open .menu-info,
+        .cake-card.is-open .cake-info {
+          max-height: min(42vh, 320px);
+          padding: 0.85rem;
+          overflow-y: auto;
+        }
+
+        .menu-info p,
+        .cake-info p {
+          font-size: 0.9rem;
+          line-height: 1.55;
+          overflow-wrap: anywhere;
+          word-break: break-word;
+        }
+
+        .menu-info h3,
+        .cake-info h3 {
+          font-size: 1rem;
+          line-height: 1.3;
+          margin-bottom: 0.35rem;
+        }
+
+        .menu-info br,
+        .cake-info br {
+          display: none;
+        }
       }
 
       @media (max-width: 768px) {
@@ -719,6 +889,13 @@
         }
       }
 
+      @media (max-width: 767px) {
+        .menu-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 1rem;
+        }
+      }
+
       .menu-title {
         text-align: center;
 
@@ -747,8 +924,7 @@
         scroll-behavior: smooth;
       }
 
-      .menu-section .menu-item h3,
-      .menu-section .menu-item h2 {
+      .menu-section .menu-item h3 {
         font-size: 1rem;
 
         font-weight: 700;
@@ -764,20 +940,41 @@
 }
 
 /* keep the earlier tweak */
-.cake-card{
+      .cake-card{
   scroll-snap-align: start;
 }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
     </style>
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <!-- ░░░░ HEADER ░░░░ -->
 <div id="home"></div>  <!-- invisible jump-target -->
     <header>
       <div class="container">
-        <a href="#home" style="text-decoration: none; color: inherit">
+        <a class="logo-link" href="#home">
           <div class="logo-container">
-            <img src="images/new_logo Background Removed.png" alt="Belga Crown Logo" />
+            <img
+              src="images/new_logo Background Removed.png"
+              alt="Belga Crown Logo"
+              width="1182"
+              height="1182"
+            />
 
             <div>
               <div class="brand-name">BELGA CROWN</div>
@@ -811,10 +1008,10 @@
 
           <a
             href="https://www.instagram.com/belga_crown/"
+            class="nav-social-link"
             aria-label="Instagram"
             target="_blank"
             rel="noopener"
-            style="display: flex; align-items: center"
           >
             <svg
               width="20"
@@ -836,10 +1033,10 @@
 
           <a
             href="https://www.facebook.com/belgacrown/"
+            class="nav-social-link"
             aria-label="Facebook"
             target="_blank"
             rel="noopener"
-            style="display: flex; align-items: center"
           >
             <svg
               width="20"
@@ -858,6 +1055,8 @@
       </div>
     </header>
 
+    <main id="main-content">
+
     <!-- ░░░░ HERO ░░░░ -->
 
     <section class="hero" id="hero">
@@ -866,7 +1065,10 @@
           class="hero-image"
           src="./images/hero_background.png"
           alt="Brown silk background"
-          loading="lazy"
+          loading="eager"
+          fetchpriority="high"
+          width="1536"
+          height="1024"
         />
 
         <h1>Најдобрите десерти во Скопје – Belga Crown</h1>
@@ -886,6 +1088,8 @@
             src="images/Belga.jpg"
             alt="Pieces of Chocolate"
             loading="lazy"
+            width="2462"
+            height="3076"
           />
         </div>
       </div>
@@ -896,7 +1100,7 @@
     <section class="chocolates">
       <div class="container">
         <div class="choc-card">
-          <img src="images/bruges.jpg" alt="Bruges Chocolate" loading="lazy" />
+          <img src="images/bruges.jpg" alt="Bruges Chocolate" loading="lazy" width="1080" height="1350" />
 
           <div class="choc-label">BRUGES</div>
         </div>
@@ -906,6 +1110,8 @@
             src="images/brussels.jpg"
             alt="Brussels Chocolate"
             loading="lazy"
+            width="1080"
+            height="1350"
           />
 
           <div class="choc-label">BRUSSELS</div>
@@ -916,6 +1122,8 @@
             src="images/antwerp.jpg"
             alt="Antwerp Chocolate"
             loading="lazy"
+            width="1080"
+            height="1350"
           />
 
           <div class="choc-label">ANTWERP</div>
@@ -959,7 +1167,7 @@
               loading="lazy"
             />
 
-            <h2>BRUGES</h2>
+            <h3>BRUGES</h3>
 
             <div class="menu-info">
               <p>dark belgian chocolate, raspberry</p>
@@ -1175,13 +1383,19 @@
 
     <!-- ░░░░ CAKE SECTION ░░░░ -->
 
-    <section class="cake-section" id="contact">
+    <section class="cake-section" id="cakes">
       <div class="container">
-        <h2 style="text-align: center">CAKES</h2>
+        <h2>CAKES</h2>
 
         <div class="cake-gallery">
           <div class="cake-card">
-            <img src="images/cake1.jpg" alt="Cake 1" loading="lazy" />
+            <img
+              src="images/cake1.jpg"
+              alt="Choco Raspberry cake slice"
+              loading="lazy"
+              width="1080"
+              height="1350"
+            />
 
             <div class="cake-info">
               <h3>CHOCO RASPBERRY</h3>
@@ -1193,7 +1407,13 @@
           </div>
 
           <div class="cake-card">
-            <img src="images/cake2.jpg" alt="Cake 2" loading="lazy" />
+            <img
+              src="images/cake2.jpg"
+              alt="Pistachio cake slice"
+              loading="lazy"
+              width="1080"
+              height="1350"
+            />
 
             <div class="cake-info">
               <h3>PISTACHIO</h3>
@@ -1206,7 +1426,13 @@
           </div>
 
           <div class="cake-card">
-            <img src="images/cake3.jpg" alt="Cake 3" loading="lazy" />
+            <img
+              src="images/cake3.jpg"
+              alt="Choco Trio cake slice"
+              loading="lazy"
+              width="1080"
+              height="1350"
+            />
 
             <div class="cake-info">
               <h3>CHOCO TRIO</h3>
@@ -1219,7 +1445,13 @@
           </div>
 
           <div class="cake-card">
-            <img src="images/cake4.jpg" alt="Cake 4" loading="lazy" />
+            <img
+              src="images/cake4.jpg"
+              alt="Cheesecake slice"
+              loading="lazy"
+              width="1080"
+              height="1350"
+            />
 
             <div class="cake-info">
               <h3>CHEESECAKE</h3>
@@ -1232,7 +1464,13 @@
           </div>
 
           <div class="cake-card">
-            <img src="images/cake5.jpg" alt="Cake 5" loading="lazy" />
+            <img
+              src="images/cake5.jpg"
+              alt="Belga Crown cake slice"
+              loading="lazy"
+              width="1080"
+              height="1350"
+            />
 
             <div class="cake-info">
               <h3>BELGA CROWN</h3>
@@ -1245,7 +1483,13 @@
           </div>
 
           <div class="cake-card">
-            <img src="images/cake6.jpg" alt="Cake 5" loading="lazy" />
+            <img
+              src="images/cake6.jpg"
+              alt="Lemon Tart cake slice"
+              loading="lazy"
+              width="1080"
+              height="1350"
+            />
 
             <div class="cake-info">
               <h3>LEMON TART</h3>
@@ -1260,7 +1504,7 @@
       </div>
     </section>
 
-    <section class="seo-services">
+    <section class="seo-services seo-hidden">
   <div class="container">
 
     <h2>Торти во Скопје – Рачно изработени торти и десерти</h2>
@@ -1287,7 +1531,7 @@
 
   </div>
 </section>
-<section class="services-section" id="faq-torti">
+<section class="services-section seo-hidden" id="faq-torti">
   <div class="container">
     <h2>Прашања за торти во Скопје</h2>
 
@@ -1305,19 +1549,19 @@
 
     <!-- ░░░░ CONTACT ░░░░ -->
 
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
       <div class="container">
         <h2 class="contact-title">CONTACT &amp; LOCATION</h2>
 
         <div class="contact-details">
           <p>
-            <b>TEL:</b> +389 071-333-626<br />
+            <b>TEL:</b> <a href="tel:+38971333626">+389 071-333-626</a><br />
 
             ul. 29ti Noemvri br.17 lokal 8 – Centar
           </p>
 
           <p>
-            <b>TEL:</b> +389 071-493-560<br />
+            <b>TEL:</b> <a href="tel:+38971493560">+389 071-493-560</a><br />
 
             ul. Nikola Rusinski br.21 – Karpoš
           </p>
@@ -1337,6 +1581,8 @@
       </div>
     </div>
 
+    </main>
+
     <!-- Script: hamburger toggle -->
 
     <script>
@@ -1355,28 +1601,191 @@
       });
     </script>
     <script>
-  const gallery = document.querySelector('.cake-gallery');
+      const gallery = document.querySelector(".cake-gallery");
 
-  gallery.addEventListener(
-    'wheel',
-    (e) => {
-      if (e.deltaY === 0) return;          // ignore horizontal wheels & magic-mouse
-      e.preventDefault();                  // stop vertical page scroll
-      gallery.scrollBy({
-        left: e.deltaY,                    // scroll same amount sideways
-        behavior: 'smooth'                 // optional – feels nicer
+      if (gallery) {
+        gallery.addEventListener(
+          "wheel",
+          (event) => {
+            if (event.deltaY === 0) return;
+            event.preventDefault();
+            gallery.scrollBy({
+              left: event.deltaY,
+              behavior: "smooth",
+            });
+          },
+          { passive: false }
+        );
+      }
+
+      const hoverCapabilityQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
+      const isTouchInteractionMode = () => !hoverCapabilityQuery.matches;
+
+      const interactiveSections = [
+        {
+          cardSelector: ".menu-item",
+          infoSelector: ".menu-info",
+          root: document.querySelector(".menu-section"),
+          idPrefix: "menu-info",
+        },
+        {
+          cardSelector: ".cake-card",
+          infoSelector: ".cake-info",
+          root: document.querySelector(".cake-section"),
+          idPrefix: "cake-info",
+        },
+      ];
+
+      const sectionStates = interactiveSections
+        .map((section) => {
+          const cards = Array.from(document.querySelectorAll(section.cardSelector));
+
+          if (!cards.length || !section.root) return null;
+
+          cards.forEach((card, index) => {
+            const info = card.querySelector(section.infoSelector);
+
+            if (!info) return;
+
+            const infoId = info.id || `${section.idPrefix}-${index + 1}`;
+            info.id = infoId;
+
+            card.setAttribute("role", "button");
+            card.setAttribute("tabindex", "0");
+            card.setAttribute("aria-controls", infoId);
+            card.setAttribute("aria-expanded", "false");
+
+            info.setAttribute("aria-hidden", "true");
+          });
+
+          return { ...section, cards };
+        })
+        .filter(Boolean);
+
+      const setCardOpenState = (card, infoSelector, shouldOpen) => {
+        const info = card.querySelector(infoSelector);
+
+        if (!info) return;
+
+        card.classList.toggle("is-open", shouldOpen);
+        card.setAttribute("aria-expanded", String(shouldOpen));
+        info.setAttribute("aria-hidden", String(!shouldOpen));
+      };
+
+      const closeSectionCards = (sectionState) => {
+        sectionState.cards.forEach((card) => {
+          setCardOpenState(card, sectionState.infoSelector, false);
+        });
+      };
+
+      const closeAllSections = () => {
+        sectionStates.forEach((sectionState) => closeSectionCards(sectionState));
+      };
+
+      const toggleCard = (sectionState, card) => {
+        if (!isTouchInteractionMode()) return;
+
+        const shouldOpen = !card.classList.contains("is-open");
+        closeSectionCards(sectionState);
+        setCardOpenState(card, sectionState.infoSelector, shouldOpen);
+      };
+
+      const cakeSwipeState = {
+        tracking: false,
+        swiped: false,
+        startX: 0,
+        startY: 0,
+        lastSwipeAt: 0,
+      };
+
+      if (gallery) {
+        gallery.addEventListener("pointerdown", (event) => {
+          if (!isTouchInteractionMode() || event.pointerType === "mouse") return;
+
+          cakeSwipeState.tracking = true;
+          cakeSwipeState.swiped = false;
+          cakeSwipeState.startX = event.clientX;
+          cakeSwipeState.startY = event.clientY;
+        });
+
+        gallery.addEventListener("pointermove", (event) => {
+          if (!cakeSwipeState.tracking) return;
+
+          const deltaX = Math.abs(event.clientX - cakeSwipeState.startX);
+          const deltaY = Math.abs(event.clientY - cakeSwipeState.startY);
+
+          if (deltaX > 10 && deltaX > deltaY) {
+            cakeSwipeState.swiped = true;
+            cakeSwipeState.lastSwipeAt = Date.now();
+          }
+        });
+
+        const stopSwipeTracking = () => {
+          cakeSwipeState.tracking = false;
+        };
+
+        gallery.addEventListener("pointerup", stopSwipeTracking);
+        gallery.addEventListener("pointercancel", stopSwipeTracking);
+        gallery.addEventListener("pointerleave", stopSwipeTracking);
+      }
+
+      const ignoreCakeToggleAfterSwipe = () =>
+        cakeSwipeState.swiped && Date.now() - cakeSwipeState.lastSwipeAt < 280;
+
+      sectionStates.forEach((sectionState) => {
+        const isCakeSection = sectionState.cardSelector === ".cake-card";
+
+        sectionState.cards.forEach((card) => {
+          card.addEventListener("click", (event) => {
+            if (!isTouchInteractionMode()) return;
+            if (event.target.closest("a, button")) return;
+
+            if (isCakeSection && ignoreCakeToggleAfterSwipe()) {
+              cakeSwipeState.swiped = false;
+              return;
+            }
+
+            toggleCard(sectionState, card);
+          });
+
+          card.addEventListener("keydown", (event) => {
+            if (!isTouchInteractionMode()) return;
+            if (event.key !== "Enter" && event.key !== " ") return;
+
+            event.preventDefault();
+            toggleCard(sectionState, card);
+          });
+        });
       });
-    },
-    { passive: false }                     // REQUIRED so preventDefault works
-  );
-</script>
+
+      document.addEventListener("click", (event) => {
+        if (!isTouchInteractionMode()) return;
+
+        const clickedInsideCard = sectionStates.some((sectionState) =>
+          sectionState.cards.some((card) => card.contains(event.target))
+        );
+
+        if (!clickedInsideCard) {
+          closeAllSections();
+        }
+      });
+
+      if (typeof hoverCapabilityQuery.addEventListener === "function") {
+        hoverCapabilityQuery.addEventListener("change", closeAllSections);
+      } else if (typeof hoverCapabilityQuery.addListener === "function") {
+        hoverCapabilityQuery.addListener(closeAllSections);
+      }
+
+      window.addEventListener("orientationchange", closeAllSections);
+    </script>
+
+    <footer>
+      <div class="nap seo-hidden">
+        <p><strong>Belga Crown – Чоколатерија & Кафе</strong></p>
+        <p>Костурски Херои бр.17 М-2, Скопје 1000, Македонија</p>
+        <p>Телефон: +389 71 333 626</p>
+        <p>Website: <a href="https://belgacrown.com">www.belgacrown.com</a></p>
+      </div>
+    </footer>
   </body>
-  <footer>
-  <div class="nap">
-    <p><strong>Belga Crown – Чоколатерија & Кафе</strong></p>
-    <p>Костурски Херои бр.17 М-2, Скопје 1000, Македонија</p>
-    <p>Телефон: +389 71 333 626</p>
-    <p>Website: <a href="https://belgacrown.com">www.belgacrown.com</a></p>
-  </div>
-</footer>
 </html>
